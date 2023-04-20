@@ -1,0 +1,8 @@
+.bg-primary-yellow{
+    background: rgb(220, 80, 40);
+}
+
+.btn-primary-yellow{
+    background-color: rgb(220, 80, 40)!important;
+    color: white!important;
+}

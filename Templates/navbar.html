@@ -1,0 +1,36 @@
+{% load static%}
+<div class="wrapper">
+
+        
+    <header id="header">
+
+        <div class="header-items">
+
+            <div class="title">
+
+                <div class="logo-image">
+                    <img src="{% static 'images/logo.jpg' %}" alt="logo-image" height="70", width="70">
+                </div>
+                <div> 
+                    <h1 class="name">MIKDOL & PARTNERS</h1>
+                </div>
+
+            </div>
+
+            <nav id="navbar">
+            
+                <ul>
+                    <li><a href={% url 'home' %}>Home</a></li>
+                    <li><a href={% url 'about'%}>About</a></li>
+                    <li><a href={% url 'contact'%}>Contact</a></li>
+                    {% comment %}  
+                    <li><a href="services.html">Services</a></li>
+                    {% endcomment %}
+                </ul>
+        
+        </nav> 
+
+        </div>
+
+    </header>
+</div>    

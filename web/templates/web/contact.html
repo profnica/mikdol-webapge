@@ -1,0 +1,21 @@
+{% extends 'main.html'%}
+
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href={% static "css/contact.css"%}>
+    <div class='contact-us'>
+        <h1>Contact Us</h1>
+        <p>Thank you for your interest in our civil engineering consulting firm. Please use the form below to contact us.</p>
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <p>Alternatively, you can contact us via phone or email:</p>
+        <ul>
+        <li>Phone: +2347033744710</li>
+        <li>Email: mikdolpartner@gmail.com</li>
+        </ul>
+    </div>
+
+{% endblock content %}

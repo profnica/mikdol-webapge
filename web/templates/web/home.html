@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikdol</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/new.css' %}">
+    
+    
+
+</head>
+<body>
+
+    <div class="wrapper">
+        
+    <header id="header">
+
+        <div class="header-items">
+
+            <div class="title">
+
+                <div class="logo-image">
+                    <img src="{% static 'images/logo.jpg' %}" alt="logo-image" height="70", width="70">
+                </div>
+                <div>
+                    <h1 class="name">MIKDOL & PARTNERS</h1>
+                </div>
+
+            </div>
+
+            <nav id="navbar">
+            
+                <ul>
+                    <li><a href={% url 'home'%}>Home</a></li>
+                     
+                    <li><a href={% url 'about' %}>About</a></li> 
+                    <li><a href={% url 'contact'%}>Contact</a></li>
+                    {% comment %}  
+                    <li><a href={% url 'services' %}>Services</a></li> 
+                    {% endcomment %}
+                </ul>
+        
+        </nav> 
+
+        </div>
+
+    </header>
+
+
+        <section id="showcase">
+
+                <h1>WHAT WE DO</h1>
+
+        </section>
+
+        
+        <section id="main-area">
+            <div class="main-area-items">
+
+                <div class="architecture">
+                    <a href="#"> <h3>Architecture & Construction</h3></a>
+                    <img src="{% static 'images/arch.jpg' %}" alt="architecture-image">
+                </div>
+                
+
+                <div class="civil">
+                    <a href="#"><h3>Civil Engineering</h3></a>
+                    <img src="{% static 'images/civil.jpg' %}" alt="civil-engineering-image">
+                </div>
+
+                <div class="real-estate">
+                    <a href="#"><h3>Real Estate Consultants</h3></a>
+                    <img src="{% static 'images/real estate.jpg' %}" alt="real-estate-image">
+                </div>
+
+                <div class="MEP">
+                    <a href="#">
+                        <h3>MEP Drawing</h3></a>
+                        <img src="{% static 'images/MEP.jpg' %}" alt="mep-image">
+                </div>
+
+                <div class="interior">
+                    <a href="#"><h3>Interior Designs</h3></a>
+                    <img src="{% static 'images/real estate 2.jpg' %}" alt="interior-image">
+                </div>
+
+                <div class="geotechnical">
+                    <a href="#"><h3>Geotechnical Investigations</h3></a>
+                    <img src="{% static 'images/soft.jpg' %}" alt="geotechnical-image">
+                </div>
+
+                <div class="software">
+                    <a href="#"><h3>Software Training</h3></a>
+                    <img src="{% static 'images/soft 2.jpg' %}" alt="software-image">
+                </div>
+
+        </section>
+
+        <aside id="sidebar">
+            <div>
+                <h1>To subscribe to our daily newsletter</h1>
+
+                    <form action="process.python" method="POST">
+                        <div class="form-group">
+                            <label>First name</label>
+                            <input type="text" name="First name" placeholder="Enter your first name">
+                        </div> 
+                        <br>
+                        <div class="form-group">
+                            <label>Last name</label>
+                            <input type="text" name="Last name" placeholder="Enter your last name">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" name="Email" placeholder="Enter your email">
+                        </div> 
+                        <br>
+                        <button><a>Subcribe</a></button>
+                    </form>
+            </div>
+        </aside>
+        <footer id="main-footer">
+            <p>Copyright &copy; 2022, Mikdol & Partners</p>
+        </footer>
+
+    </div>
+    
+
+</body>
+</html>
