@@ -98,25 +98,11 @@
     
         <aside id="sidebar">
             <div class="sidebar-div">
-                <h1>To subscribe to our daily newsletter</h1>
                 <form method="POST" action="{% url 'subscribe' %}">
+                    <h2>Subscribe to our Newsletter</h2>
                     {% csrf_token %}
-                    <div class="form-group">
-                        <label for="id_first_name">First name:</label>
-                        <input type="text" name="first_name" id="id_first_name" placeholder="Enter your first name" required>
-                    </div> 
-                    <br>
-                    <div class="form-group">
-                        <label for="id_last_name">Last name:</label>
-                        <input type="text" name="last_name" id="id_last_name" placeholder="Enter your last name" required>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="id_email">Email:</label>
-                        <input type="email" name="email" id="id_email" placeholder="Enter your email address" required>
-                    </div>
-                    
-                    <button type="submit">Subscribe</button>
+                    {{ subscribe_form.as_p }}
+                    <button type="submit">Subscribe</button> 
                 </form>
             </div>
         </aside>

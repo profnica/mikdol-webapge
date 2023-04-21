@@ -68,13 +68,16 @@ def subscribe(request):
             first_name = form.cleaned_data['first_name']
             last_name = form.cleaned_data['last_name']
             email = form.cleaned_data['email']
+            print(f"Subscribe form data: {first_name}, {last_name}, {email}")
             
             if Subscribe.objects.filter(email=email).exists():
+                print(f"Email address {email} is already subscribed.")
                 messages.warning(request, 'You have already subscribed to our newsletter.')
             else:
                 subscribe = Subscribe(first_name=first_name, last_name=last_name, email=email)
                 subscribe.save()
-                subject = 'Thanks for subscribing to our newsletter!'
+                print(f"Saved subscription: {subscribe}")
+                subject = f"Dear {first_name}, Thanks for subscribing to our newsletter!"
                 message = 'Welcome to our newsletter! You will now receive regular updates from us.'
                 from_email = settings.EMAIL_HOST_USER
                 to = [email]
@@ -86,12 +89,12 @@ def subscribe(request):
                     fail_silently=False
                 )
                 messages.success(request, 'You have successfully subscribed to our newsletter!')
-                
+                print(f"Saving new subscription: {subscribe}")
                 return redirect('Subsuccess')  # redirect to the success page after successful subscription
         else:
             messages.error(request, 'Please enter valid information.')
     else:
-        form = SubscribeForm()
+        form = SubscribeForm() 
 
     context = {
         'form': form
