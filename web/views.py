@@ -108,62 +108,7 @@ def subscribe(request):
         
 
 
-# def contact(request):
-#     if request.method == 'POST':
-#         form = ContactForm(request.POST)
-#         if form.is_valid():
-#             name = form.cleaned_data['name']
-#             email = form.cleaned_data['email']
-#             subject = form.cleaned_data['subject']
-#             message = form.cleaned_data['message']
 
-#             # Save message to database
-#             contact_message = ContactMessage(name=name, email=email, subject=subject, message=message)
-#             contact_message.save()
-
-#             # Send email to recipient
-#             recipient_list = ['adefolaluadegboyega@gmail.com', 'goingwelllogic@gmail.com']
-#             email_message = EmailMessage(
-#                 subject=subject,
-#                 body=message,
-#                 from_email=settings.EMAIL_HOST_USER,
-#                 to=[recipient_list],
-#                 reply_to=[email],
-#             )
-#             email_message.send()
-
-#             return redirect('success')
-#     else:
-#         form = ContactForm()
-#     return render(request, 'web/contact.html', {'form': form})
-
-
-
-# def contact(request):
-#     if request.method == 'POST':
-#         form = ContactForm(request.POST)
-#         if form.is_valid():
-#             name = form.cleaned_data['name']
-#             email = form.cleaned_data['email']
-#             subject = form.cleaned_data['subject']
-#             message = form.cleaned_data['message']
-
-#             # Save message to database
-#             contact_message = ContactMessage(name=name, email=email, subject=subject, message=message)
-#             contact_message.save()
-
-#             # Send email to recipient
-#             recipient_list = [email]
-#             send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, recipient_list)
-
-#             return redirect('success')
-#     else:
-#         form = ContactForm()
-#     return render(request, 'web/contact.html', {'form': form})
-
-    
-  
-    
    
 
 
